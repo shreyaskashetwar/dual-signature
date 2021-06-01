@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>Admin_Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../bootstrap-3.3.6-dist/css/bootstrap.min.css">
+ 
+
+ 
+</head>
+<body style="background-color:#e0e0e0">
+<br>
+<br>
+<div class="container">
+<nav class="navbar navbar-inverse" style="background-color: black;">
+
+    <div class="navbar-header">
+    <a class="navbar-brand" href="index.jsp"><span class="glyphicon glyphicon-home"></span>  HOME</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="academics/academics.jsp">ACADEMICS
+	 </a></li>
+  
+      <li><a href="updates.jsp">UPDATES</a></li>
+      <li><a href="wallmagazine/wallmagazine.jsp">WALL MAGAZINE</a></li>
+      <li><a href="feedback/feedbackform.jsp">FEEDBACK</a></li>
+	  <li><a href="#">ABOUT</a></li>
+    </ul>
+	</nav>
+	<div class="jumbotron" style="background-color:blue">
+<br><br><br>
+</div>
+<div class="well" style="background-color:#f8f8f8">
+  <div class="row">
+  <div class="col-md-9">
+	
+	Welcome
+	
+	
+	</div>
+	</div>
+	 </div>
+
+	<div class="jumbotron" style="background-color:#f8f8f8">
+	hellllooooo
+	
+	<button type="submit" class="btn btn-primary btn-block">Post update</button>
+	<br><br>
+	
+	<a href="<%= rs.getString(3)%>" class="thumbnail">
+           
+    <br><br> 
+			</a>
+	hdggkjnb
+	<br>
+	<br>
+	
+	<table class="table"  width="50%" style="background-color:">
+<tr><th>BOOK_TITLE</th><th>STUDENT_NAME</th><th>CLASS</th>
+</tr>
+
+<tr>
+<td><%=rst.getString(1)%></td>
+<td><%=rst.getString(2)%></td>
+<td><%=rst.getString(3)%></td>
+</tr>
+
+<%}%>
+</table>
+	
+	
+	
+	<br><br>
+	
+	<h2>Add Updates:</h2>
+		<FORM name="forms" ACTION="add_updates_success.jsp" method="POST"onsubmit="return validateform();"> 
+		 <div class="row content">
+			<div class="col-md-12 ">
+				<label><font style="color: red; ">*</font>Heading:</label><br>
+			<TEXTAREA class="form-control" name="heading"  ROWS=1 style="resize: none"> </TEXTAREA>  <br>
+			</div>
+		</div>
+			
+
+		<div class="row content">
+			<div class="col-md-12 ">
+			<label><font style="color: red; ">*</font>Enter the update:</label>
+			<font style="color: red; ">(Maximum 4000 characters)</font>
+			<TEXTAREA class="form-control" name="data" ROWS=20 style="resize: none"> </TEXTAREA><br>
+			</div>
+		</div>
+			 <br>
+				<button type="submit" class="btn btn-primary btn-block">Post update</button>
+				<button type="reset" class="btn btn-primary btn-block">Reset</button><br>
+			
+		 </FORM>
+	
+	</div>
+	
+<table class="table"  width="50%" style="background-color:">
+<tr><th>BOOK_TITLE</th><th>STUDENT_NAME</th><th>CLASS</th>
+</tr>
+
+<tr>
+<td><%=rst.getString(1)%></td>
+<td><%=rst.getString(2)%></td>
+<td><%=rst.getString(3)%></td>
+</tr>
+
+<%}%>
+</table>
+</div>
+
+
+
+ <div class="jumbotron">
+	
+	</div>
+
+ </div>
+
+</body>
+
+</html>
